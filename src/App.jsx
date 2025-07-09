@@ -4,6 +4,8 @@ import './App.css'
 
 function App() {
 
+  const API_BASE = '/api'; // now works on same domain
+
   const [icNumber, setIcNumber] = useState('');
   const [result, setResult] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -14,7 +16,7 @@ function App() {
     setLoading(true);        // start loading
 
     try {
-      const response = await fetch(`http://localhost:3000/api/check-ic`, {
+      const response = await fetch(`${API_BASE}/check-ic`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ icNumber }),
