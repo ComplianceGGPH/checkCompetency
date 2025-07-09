@@ -44,7 +44,7 @@ function App() {
           <img src={Logo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1 className='main' >Guide Competency Level</h1>
+      <h1 className='main' >GGP GUIDE VERIFICATION</h1>
       <div className="card">
         <input
           type='text'
@@ -63,7 +63,7 @@ function App() {
           </div>
         ) : result && (
           <div className="result">
-            <h3>Result</h3>
+            <h3>GUIDE INFO</h3>
             <table className="result-table">
               <tbody>
                 <tr>
@@ -81,7 +81,7 @@ function App() {
               </tbody>
             </table>
 
-            <h3><strong>Activity Competency Level: {result.level}</strong></h3>
+            <h3>ACTIVITY COMPETENCY LEVEL{result.level}</h3>
             <table className="result-activity">
               <tbody>
                 <tr>
