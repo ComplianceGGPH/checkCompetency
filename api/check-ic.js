@@ -6,7 +6,8 @@ export default async function handler(req, res) {
         return res.status(405).json({ message: 'Method Not Allowed' });
     }
 
-    const { icNumber } = req.body;
+    let { icNumber } = req.body;
+    icNumber = icNumber.replace(/[\s-]/g, '');
 
     if (!icNumber) {
         return res.status(400).json({ message: 'IC number is required' });
