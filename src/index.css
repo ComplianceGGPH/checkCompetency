@@ -25,11 +25,16 @@ a:hover {
 
 body {
   margin: 0;
+  background-color: #e9e9e9;
+  color: rgba(255, 255, 255, 0.87);
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  flex-direction: column;
+  align-items: center;
   min-height: 100vh;
+  padding: 2rem 1rem;
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -39,15 +44,27 @@ h1 {
 button,
 input {
   border-radius: 8px;
-  border: 1px solid transparent;
+  border: 1px solid #000000;
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: white;
   cursor: pointer;
   transition: border-color 0.25s;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 0, 0, 0.87);
+}
+
+input {
+  width: 100%;
+  max-width: 400px;
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+button {
+  background-color: #EF9122;
 }
 
 button:hover {

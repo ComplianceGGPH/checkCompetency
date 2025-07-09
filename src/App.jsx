@@ -44,7 +44,7 @@ function App() {
           <img src={Logo} className="logo react" alt="React logo" />
         </a>
       </div>
-      <h1>Guide Competency Level</h1>
+      <h1 className='main' >Guide Competency Level</h1>
       <div className="card">
         <input
           type='text'
@@ -64,21 +64,59 @@ function App() {
         ) : result && (
           <div className="result">
             <h3>Result</h3>
-            <p><strong>Name:</strong> {result.name}</p>
-            <p><strong>NickName:</strong> {result.nickname}</p>
-            <p><strong>Registration No:</strong> {result.RegNo}</p><br></br>
+            <table className="result-table">
+              <tbody>
+                <tr>
+                  <th>Name</th>
+                  <td>{result.name}</td>
+                </tr>
+                <tr>
+                  <th>NickName</th>
+                  <td>{result.nickname}</td>
+                </tr>
+                <tr>
+                  <th>Registration No</th>
+                  <td>{result.RegNo}</td>
+                </tr>
+              </tbody>
+            </table>
 
-            <h2><strong>Activity Competency Level:</strong> {result.level}</h2>
-
-            <p><strong>White Water Rafting:</strong> {result.WWR}</p>
-            <p><strong>Fun Trip Rafting:</strong> {result.FTR}</p>
-            <p><strong>Waterfall Abseiling:</strong> {result.WA}</p>
-            <p><strong>ATV:</strong> {result.ATV}</p>
-            <p><strong>Paintball:</strong> {result.PB}</p>
-            <p><strong>Sunset Hiking / Jungle Trekking / Cave Exploration:</strong> {result.SHJTCE}</p>
-            <p><strong>Telematch / Team Building:</strong> {result.TMTB}</p>
-            <br></br>
-            <h2><strong> To update your competency level, please submit your latest certificates through the admin. </strong></h2>
+            <h3><strong>Activity Competency Level: {result.level}</strong></h3>
+            <table className="result-activity">
+              <tbody>
+                <tr>
+                  <th>White Water Rafting</th>
+                  <td>{result.WWR}</td>
+                </tr>
+                <tr>
+                  <th>Fun Trip Rafting</th>
+                  <td>{result.FTR}</td>
+                </tr>
+                <tr>
+                  <th>Waterfall Abseiling</th>
+                  <td>{result.WA}</td>
+                </tr>
+                <tr>
+                  <th>ATV</th>
+                  <td>{result.ATV}</td>
+                </tr>
+                <tr>
+                  <th>Paintball</th>
+                  <td>{result.PB}</td>
+                </tr>
+                <tr>
+                  <th>Sunset Hiking / Jungle Trekking / Cave Exploration</th>
+                  <td>{result.SHJTCE}</td>
+                </tr>
+                <tr>
+                  <th>Telematch / Team Building</th>
+                  <td>{result.TMTB}</td>
+                </tr>
+              </tbody>
+            </table>
+            <p className="note">
+              <strong>To update your competency level, please submit your latest certificates through the admin.</strong>
+            </p>
           </div>
         )}
       </div>

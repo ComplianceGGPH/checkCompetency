@@ -1,7 +1,6 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  width: 100%;
+  max-width: 800px;
   text-align: center;
 }
 
@@ -44,8 +43,97 @@
 
 .card {
   padding: 2em;
+  ;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.result {
+  text-align: center;
+  background-color: #58595B;
+  padding: 1.5em;
+  border-radius: 10px;
+  margin-top: 2rem;
+  line-height: 1.6;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.result h3,
+.result h2 {
+  color: rgb(212, 212, 212);
+}
+
+.main {
+  color: #454546;
+}
+
+.loading {
+  color: #AEACB2;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.error {
+  margin-top: 1rem;
+  background-color: #662222;
+  color: #ffcccc;
+  padding: 1em;
+  border-radius: 6px;
+}
+
+.result-table,
+.result-activity {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: #FEFEFE;
+  border-radius: 8px;
+  overflow: hidden;
+
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+}
+
+.result-table th,
+.result-table td,
+.result-activity th,
+.result-activity td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #58595B;
+  background-color: ffd;
+  color: black;
+
+}
+
+.result-activity td {
+  width: 20%;
+  text-align: center;
+}
+
+.result-table td .result-activity td {
+  text-align: center;
+}
+
+.result-table th,
+.result-activity th {
+  background-color: #AEACB2;
+  font-weight: 600;
+  /* color: #00ffc8; */
+  color: #ffffff;
+
+}
+
+.result-table tr:last-child td,
+.result-activity tr:last-child td {
+  border-bottom: none;
+}
+
+.note {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  color: rgb(212, 212, 212);
+  font-size: 0.95rem;
 }
