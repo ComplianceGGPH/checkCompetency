@@ -42,7 +42,7 @@
 }
 
 .card {
-  padding: 2em;
+  padding: 0em;
   ;
 }
 
@@ -104,7 +104,6 @@
   border-bottom: 1px solid #58595B;
   background-color: ffd;
   color: black;
-
 }
 
 .result-activity td {
