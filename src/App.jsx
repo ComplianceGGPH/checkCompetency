@@ -66,7 +66,7 @@ function App() {
             <h3>Result</h3>
             <p><strong>Name:</strong> {result.name}</p>
             <p><strong>NickName:</strong> {result.nickname}</p>
-            <p><strong>IC:</strong> {result.icNumber}</p><br></br>
+            <p><strong>Registration No:</strong> {result.RegNo}</p><br></br>
 
             <h2><strong>Activity Competency Level:</strong> {result.level}</h2>
 
@@ -77,6 +77,8 @@ function App() {
             <p><strong>Paintball:</strong> {result.PB}</p>
             <p><strong>Sunset Hiking / Jungle Trekking / Cave Exploration:</strong> {result.SHJTCE}</p>
             <p><strong>Telematch / Team Building:</strong> {result.TMTB}</p>
+            <br></br>
+            <h2><strong> To update your competency level, please submit your latest certificates through the admin. </strong></h2>
           </div>
         )}
       </div>

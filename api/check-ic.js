@@ -34,7 +34,7 @@ export default async function handler(req, res) {
 
         if (matched) {
             return res.json({
-                icNumber: matched[14],
+                RegNo: matched[1],
                 name: matched[2],
                 nickname: matched[3],
                 WWR: matched[4],
