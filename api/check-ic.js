@@ -27,7 +27,7 @@ export default async function handler(req, res) {
 
         const result = await sheets.spreadsheets.values.get({
             spreadsheetId: process.env.SHEET_ID,
-            range: "'Form responses 1'!A2:O",
+            range: "'Form responses 1'!A2:P",
         });
 
         const rows = result.data.values;
