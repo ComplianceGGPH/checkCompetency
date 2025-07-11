@@ -112,6 +112,10 @@ function App() {
                   <th>Telematch / Team Building</th>
                   <td>{result.TMTB}</td>
                 </tr>
+                <tr>
+                  <th>DRIVER</th>
+                  <td>{result.DRIVER}</td>
+                </tr>
               </tbody>
             </table>
             <p className="note">

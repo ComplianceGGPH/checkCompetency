@@ -31,7 +31,7 @@ export default async function handler(req, res) {
         });
 
         const rows = result.data.values;
-        const matched = rows.find((row) => row[14] === icNumber);
+        const matched = rows.find((row) => row[15] === icNumber);
 
         if (matched) {
             return res.json({
@@ -45,6 +45,7 @@ export default async function handler(req, res) {
                 PB: matched[8],
                 SHJTCE: matched[9],
                 TMTB: matched[10],
+                DRIVER: matched[11],
             });
         } else {
             return res.json({ message: 'Record not found. Please contact admin.' });
