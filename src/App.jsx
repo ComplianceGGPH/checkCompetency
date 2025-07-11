@@ -113,7 +113,7 @@ function App() {
                   <td>{result.TMTB}</td>
                 </tr>
                 <tr>
-                  <th>DRIVER</th>
+                  <th>Driver</th>
                   <td>{result.DRIVER}</td>
                 </tr>
               </tbody>

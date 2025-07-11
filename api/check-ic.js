@@ -27,7 +27,7 @@ export default async function handler(req, res) {
 
         const result = await sheets.spreadsheets.values.get({
             spreadsheetId: process.env.SHEET_ID,
-            range: "'Form responses 1'!A2:P",
+            range: "'PTDATA'!A2:P",
         });
 
         const rows = result.data.values;
@@ -38,14 +38,14 @@ export default async function handler(req, res) {
                 RegNo: matched[1],
                 name: matched[2],
                 nickname: matched[3],
-                WWR: matched[4],
-                FTR: matched[5],
-                WA: matched[6],
-                ATV: matched[7],
-                PB: matched[8],
-                SHJTCE: matched[9],
-                TMTB: matched[10],
-                DRIVER: matched[11],
+                WWR: matched[6],
+                FTR: matched[7],
+                WA: matched[8],
+                ATV: matched[9],
+                PB: matched[10],
+                SHJTCE: matched[11],
+                TMTB: matched[12],
+                DRIVER: matched[13],
             });
         } else {
             return res.json({ message: 'Record not found. Please contact admin.' });
