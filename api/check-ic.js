@@ -27,25 +27,57 @@ export default async function handler(req, res) {
 
         const result = await sheets.spreadsheets.values.get({
             spreadsheetId: process.env.SHEET_ID,
-            range: "'PTDATA'!A2:P",
+            range: "'DATABASE'!A2:AJ",
         });
 
         const rows = result.data.values;
-        const matched = rows.find((row) => row[15] === icNumber);
+        const matched = rows.find((row) => row[23] === icNumber);
 
         if (matched) {
             return res.json({
-                RegNo: matched[1],
-                name: matched[2],
-                nickname: matched[3],
-                WWR: matched[6],
-                FTR: matched[7],
-                WA: matched[8],
-                ATV: matched[9],
-                PB: matched[10],
-                SHJTCE: matched[11],
-                TMTB: matched[12],
-                DRIVER: matched[13],
+                RegNo: matched[0],
+                name: matched[1],
+                nickname: matched[2],
+                // WHITE WATER RAFTING
+                WWR: matched[4],
+                WWRVALID: matched[5],
+                WWRCERT: matched[6],
+                WWRCARD: matched[7],
+                // FUNTRIP RAFTING
+                FTR: matched[8],
+                FTRVALID: matched[9],
+                FTRCERT: matched[10],
+                FTRCARD: matched[11],
+                // WATERFALL ABSEILING
+                WA: matched[12],
+                WAVALID: matched[13],
+                WACERT: matched[14],
+                WACARD: matched[15],
+                // ALL-TERRAIN VEHICLE
+                ATV: matched[16],
+                ATVVALID: matched[17],
+                ATVCERT: matched[18],
+                ATVCARD: matched[19],
+                // PAINTBALL
+                PB: matched[20],
+                PBVALID: matched[21],
+                PBCERT: matched[22],
+                PBCARD: matched[23],
+                // SUNSET HIKING / JUNGLE TREKKING / CAVE EXPLORATION
+                SHJTCE: matched[24],
+                SHJTCEVALID: matched[25],
+                SHJTCECERT: matched[26],
+                SHJTCECARD: matched[27],
+                // TELEMATCH / TEAM BUILDING
+                TMTB: matched[28],
+                TMTBVALID: matched[29],
+                TMTBCERT: matched[30],
+                TMTBCARD: matched[31],
+                // DRIVER
+                DRIVER: matched[32],
+                DRIVERVALID: matched[33],
+                DRIVERCERT: matched[34],
+                DRIVERCARD: matched[35],
             });
         } else {
             return res.json({ message: 'Record not found. Please contact admin.' });
