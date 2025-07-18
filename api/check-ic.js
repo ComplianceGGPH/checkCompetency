@@ -27,7 +27,7 @@ export default async function handler(req, res) {
 
         const result = await sheets.spreadsheets.values.get({
             spreadsheetId: process.env.SHEET_ID,
-            range: "'DATABASE'!A2:AJ",
+            range: "'DATABASE'!A2:AZ",
         });
 
         const rows = result.data.values;
@@ -39,45 +39,45 @@ export default async function handler(req, res) {
                 name: matched[1],
                 nickname: matched[2],
                 // WHITE WATER RAFTING
-                WWR: matched[7],
-                WWRVALID: matched[8],
-                WWRCERT: matched[9],
-                WWRCARD: matched[10],
+                WWR: matched[6],
+                WWRVALID: matched[7],
+                WWRCERT: matched[8],
+                WWRCARD: matched[9],
                 // FUNTRIP RAFTING
-                FTR: matched[11],
-                FTRVALID: matched[12],
-                FTRCERT: matched[13],
-                FTRCARD: matched[14],
+                FTR: matched[10],
+                FTRVALID: matched[11],
+                FTRCERT: matched[12],
+                FTRCARD: matched[13],
                 // WATERFALL ABSEILING
-                WA: matched[15],
-                WAVALID: matched[16],
-                WACERT: matched[17],
-                WACARD: matched[18],
+                WA: matched[14],
+                WAVALID: matched[15],
+                WACERT: matched[16],
+                WACARD: matched[17],
                 // ALL-TERRAIN VEHICLE
-                ATV: matched[19],
-                ATVVALID: matched[20],
-                ATVCERT: matched[21],
-                ATVCARD: matched[22],
+                ATV: matched[18],
+                ATVVALID: matched[19],
+                ATVCERT: matched[20],
+                ATVCARD: matched[21],
                 // PAINTBALL
-                PB: matched[23],
-                PBVALID: matched[24],
-                PBCERT: matched[25],
-                PBCARD: matched[26],
+                PB: matched[22],
+                PBVALID: matched[23],
+                PBCERT: matched[24],
+                PBCARD: matched[25],
                 // SUNSET HIKING / JUNGLE TREKKING / CAVE EXPLORATION
-                SHJTCE: matched[27],
-                SHJTCEVALID: matched[28],
-                SHJTCECERT: matched[29],
-                SHJTCECARD: matched[30],
+                SHJTCE: matched[26],
+                SHJTCEVALID: matched[27],
+                SHJTCECERT: matched[28],
+                SHJTCECARD: matched[29],
                 // TELEMATCH / TEAM BUILDING
-                TMTB: matched[31],
-                TMTBVALID: matched[32],
-                TMTBCERT: matched[33],
-                TMTBCARD: matched[34],
+                TMTB: matched[30],
+                TMTBVALID: matched[31],
+                TMTBCERT: matched[32],
+                TMTBCARD: matched[33],
                 // DRIVER
-                DRIVER: matched[35],
-                DRIVERVALID: matched[36],
-                DRIVERCERT: matched[37],
-                DRIVERCARD: matched[38],
+                DRIVER: matched[34],
+                DRIVERVALID: matched[35],
+                DRIVERCERT: matched[36],
+                DRIVERCARD: matched[37],
             });
         } else {
             return res.json({ message: 'Record not found. Please contact admin.' });
