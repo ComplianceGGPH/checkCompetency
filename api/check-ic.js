@@ -31,7 +31,7 @@ export default async function handler(req, res) {
         });
 
         const rows = result.data.values;
-        const matched = rows.find((row) => row[23] === icNumber);
+        const matched = rows.find((row) => row[3] === icNumber);
 
         if (matched) {
             return res.json({
