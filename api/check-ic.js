@@ -39,10 +39,10 @@ export default async function handler(req, res) {
                 name: matched[1],
                 nickname: matched[2],
                 // WHITE WATER RAFTING
-                WWR: matched[6],
-                WWRVALID: matched[7],
-                WWRCERT: matched[8],
-                WWRCARD: matched[9],
+                WWRFTR: matched[6],
+                WWRFTRVALID: matched[7],
+                WWRFTRCERT: matched[8],
+                WWRFTRCARD: matched[9],
                 // FUNTRIP RAFTING
                 // FTR: matched[10],
                 // FTRVALID: matched[11],
